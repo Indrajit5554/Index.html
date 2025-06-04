@@ -1,0 +1,144 @@
+/* style.css */
+
+/* পুরো পৃষ্ঠার জন্য মৌলিক স্টাইল */
+body {
+    font-family: Arial, sans-serif; /* ফন্ট সেট করা */
+    background-color: #f4f7f6; /* ব্যাকগ্রাউন্ড রঙ */
+    color: #333; /* লেখার রঙ */
+    display: flex;
+    justify-content: center; /* কন্টেন্টকে অনুভূমিকভাবে মাঝখানে আনা */
+    align-items: center; /* কন্টেন্টকে উল্লম্বভাবে মাঝখানে আনা */
+    min-height: 100vh; /* পৃষ্ঠার ন্যূনতম উচ্চতা */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box; /* প্যাডিং এবং বর্ডার বক্সের মাপের মধ্যে অন্তর্ভুক্ত করা */
+}
+
+/* কন্টেইনারের স্টাইল - যেখানে সব কন্টেন্ট থাকবে */
+.container {
+    background-color: #ffffff; /* কন্টেইনারের ব্যাকগ্রাউন্ড রঙ */
+    padding: 40px; /* ভেতরের দিকে ফাঁকা স্থান */
+    border-radius: 12px; /* কোণাগুলোকে গোলাকার করা */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* হালকা ছায়া যোগ করা */
+    width: 100%;
+    max-width: 800px; /* সর্বোচ্চ চওড়া */
+    text-align: center; /* ভেতরের লেখা মাঝখানে আনা */
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #2c3e50; /* শিরোনামের রঙ */
+    margin-bottom: 30px; /* নিচের দিকে ফাঁকা স্থান */
+    font-size: 2.2em; /* ফন্ট সাইজ */
+}
+
+/* ইনপুট অংশের স্টাইল */
+.input-section {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block; /* লেবেলকে একটি ব্লক উপাদান বানানো */
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+textarea {
+    width: calc(100% - 20px); /* ইনপুট বক্সের চওড়া */
+    padding: 15px;
+    border: 1px solid #ccc; /* বর্ডার */
+    border-radius: 8px;
+    font-size: 1em;
+    resize: vertical; /* শুধু উল্লম্বভাবে আকার পরিবর্তনের অনুমতি */
+    min-height: 150px; /* ন্যূনতম উচ্চতা */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50; /* বাটনের ব্যাকগ্রাউন্ড রঙ (সবুজ) */
+    color: white; /* লেখার রঙ */
+    padding: 15px 30px; /* বাটনের ভেতরের ফাঁকা স্থান */
+    border: none; /* বর্ডার নেই */
+    border-radius: 8px; /* কোণা গোলাকার করা */
+    font-size: 1.1em;
+    cursor: pointer; /* মাউস কার্সর পরিবর্তনের জন্য */
+    transition: background-color 0.3s ease; /* রঙ পরিবর্তনের জন্য মসৃণ ট্রানজিশন */
+}
+
+button:hover { /* বাটনে মাউস নিলে রঙ পরিবর্তন হবে */
+    background-color: #45a049;
+}
+
+button:disabled { /* বাটন নিষ্ক্রিয় হলে স্টাইল */
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* আউটপুট অংশের স্টাইল */
+.output-section {
+    margin-top: 30px;
+    min-height: 100px; /* ভিডিও না থাকলে লেআউট যাতে না নড়ে */
+}
+
+.message {
+    color: #d35400; /* ত্রুটির বার্তার জন্য কমলা রঙ */
+    margin-top: 15px;
+    font-weight: bold;
+    display: none; /* শুরুতে লুকানো থাকবে */
+}
+
+video {
+    width: 100%;
+    max-width: 600px; /* ভিডিও প্লেয়ারের সর্বোচ্চ চওড়া */
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ভিডিও প্লেয়ারে ছায়া */
+}
+
+/* লোডিং স্পিনারের স্টাইল */
+.spinner {
+    border: 6px solid #f3f3f3; /* হালকা ধূসর বর্ডার */
+    border-top: 6px solid #3498db; /* নীল বর্ডার উপরের দিকে */
+    border-radius: 50%; /* গোলাকার করা */
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* স্পিনারের ঘোরার অ্যানিমেশন */
+    margin: 20px auto; /* স্পিনারকে মাঝখানে আনা */
+}
+
+/* স্পিনারের অ্যানিমেশন */
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* ০% সময়ে ০ ডিগ্রি ঘোরা */
+    100% { transform: rotate(360deg); } /* ১০০% সময়ে ৩৬০ ডিগ্রি ঘোরা */
+}
+
+/* বিভিন্ন স্ক্রিন আকারের জন্য রেসপন্সিভ স্টাইল */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        border-radius: 8px;
+    }
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    textarea {
+        padding: 10px;
+        min-height: 120px;
+    }
+}
